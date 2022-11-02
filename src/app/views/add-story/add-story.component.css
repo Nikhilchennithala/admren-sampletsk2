@@ -1,0 +1,28 @@
+.title {
+    text-align: center;
+}
+.form {
+    width: 80%;
+    margin: auto;
+}
+#msform {
+    position: relative;
+    margin-top: 30px;
+}
+#msform input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+button {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    background-color: black;
+}

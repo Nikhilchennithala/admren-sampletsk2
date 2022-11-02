@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="title">
+        <h5>Sprint Calculator</h5>
+    </div>
+    <div class="form">
+        <form [formGroup]="sprintCalculatorForm" id="msform">
+            <div>
+                <label for="">Sprint Point</label><span class="text-danger">*</span>
+                <!-- <input type="text" formControlName="storyPoint"  [ngClass]="{ 'is-invalid': story.storyPoint.errors }" placeholder="Enter your story name"/> -->
+                <select name="" id="" formControlName="storyPoint"  [ngClass]="{ 'is-invalid': story.storyPoint.errors }" placeholder="Enter your story name">
+                    <option *ngFor="let sprint of sprints" [value]="sprint.value">{{sprint.sprintName}}</option>
+                </select>
+                <div *ngIf="sprintCalculatorForm.controls.storyPoint.errors  && isSbumit">
+                    <div *ngIf="story.storyPoint.errors?.required" class="text-danger">*Story name is required</div>
+                </div>
+            </div>
+            <div>
+                <button (click)="submit()">Auto Select Stories</button>
+            </div>
+            <div>
+                <button (click)="submit()">Clear Stories</button>
+            </div>
+            <div>
+                <button (click)="submit()">Clear Sprints</button>
+            </div>
+        </form>
+    </div>
+</div>

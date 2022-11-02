@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="title">
+        <h5>Stories and Point </h5>
+    </div>
+    <div class="content" *ngFor="let item of storyPoints">
+        <div>
+            <span>Story name:</span>
+            <span>{{item.name}}</span>
+        </div>
+        <div>
+            <span>Story Point:</span>
+            <span>{{item.point}}</span>
+        </div>
+    </div>
+</div>

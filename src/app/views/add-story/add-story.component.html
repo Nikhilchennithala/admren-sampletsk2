@@ -1,0 +1,26 @@
+<div class="main">
+    <div class="title">
+        <h5>Add Story Form</h5>
+    </div>
+    <div class="form">
+        <form [formGroup]="storyForm" id="msform">
+            <div>
+                <label for="">Story Name</label><span class="text-danger">*</span>
+                <input type="text" formControlName="storyName"  [ngClass]="{ 'is-invalid': story.storyName.errors }" placeholder="Enter your story name"/>
+                <div *ngIf="storyForm.controls.storyName.errors  && isSbumit">
+                    <div *ngIf="story.storyName.errors?.required" class="text-danger">*Story name is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="">Story Point</label><span class="text-danger">*</span>
+                <input type="number" formControlName="storyPoint" name="storyPoint" placeholder="Enter your story point"/>
+                <div *ngIf="storyForm.controls.storyPoint.errors && isSbumit">
+                    <div *ngIf="story.storyPoint.errors?.required" class="text-danger">*Story Point is required</div>
+                </div>
+            </div>
+            <div>
+                <button (click)="submit()">ADD STORY</button>
+            </div>
+        </form>
+    </div>
+</div>
